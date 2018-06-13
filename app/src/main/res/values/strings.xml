@@ -1,0 +1,10 @@
+<resources>
+    <string name="app_name">Tip Calculator</string>
+    <string name="enter_check_amount">Enter check amount</string>
+
+    <string name="format_tip_amount">tip amount %s</string>
+    <string name="select_a_tip">Choose a tip</string>
+    <string name="selecting_default_tip">Selecting default tip option</string>
+    <string name="error_price_cannot_be_empty">Price cannot be empty</string>
+    <string name="custom">Custom</string>
+</resources>
