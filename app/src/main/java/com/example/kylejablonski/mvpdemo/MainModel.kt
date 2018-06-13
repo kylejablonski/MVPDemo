@@ -3,7 +3,7 @@ package com.example.kylejablonski.mvpdemo
 class MainModel {
 
     val tipOptions = arrayOf(5, 10, 15, 20, 22)
-    var defaultTipIndex = 3
+    val defaultTipIndex = 3
     private var selectedTipOption = tipOptions[defaultTipIndex]
 
     var checkAmount = 0.00
@@ -22,7 +22,7 @@ class MainModel {
 
     fun computeTotalPrice(price: String?): Double {
         if(price.isNullOrEmpty()){
-            return  0.0
+            return  0.00
         }
         val doublePrice = price!!.toDouble()
         if (doublePrice < 0) {
