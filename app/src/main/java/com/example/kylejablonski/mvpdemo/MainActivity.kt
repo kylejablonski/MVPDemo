@@ -40,8 +40,8 @@ class MainActivity : AppCompatActivity(), Contract.View, ChipGroup.OnCheckedChan
         }
     }
 
-    override fun selectDefaultTipOption() {
-        chipGroup.check(chipGroup.getChildAt(3).id)
+    override fun selectDefaultTipOption(index: Int) {
+        chipGroup.check(chipGroup.getChildAt(index).id)
     }
 
     override fun displayInitialPrice(total: Double) {

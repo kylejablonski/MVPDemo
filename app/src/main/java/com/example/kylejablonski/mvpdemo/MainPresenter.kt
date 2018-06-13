@@ -7,14 +7,14 @@ class MainPresenter(
 
     override fun start() {
         view.displayTipOptions(model.tipOptions)
-        view.selectDefaultTipOption()
+        view.selectDefaultTipOption(model.defaultTipIndex)
         view.displayInitialPrice(model.checkAmount)
     }
 
     override fun changeTipPercentage(position: Int) {
         model.setTipOption(position)
         if (position < 0) {
-            view.selectDefaultTipOption()
+            view.selectDefaultTipOption(model.defaultTipIndex)
         }
     }
 

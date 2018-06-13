@@ -7,7 +7,7 @@ interface Contract {
 
         fun displayTipOptions(percentages: Array<Int>)
 
-        fun selectDefaultTipOption()
+        fun selectDefaultTipOption(index: Int)
 
         fun displayInitialPrice(total: Double)
 

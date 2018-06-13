@@ -3,7 +3,8 @@ package com.example.kylejablonski.mvpdemo
 class MainModel {
 
     val tipOptions = arrayOf(5, 10, 15, 20, 22)
-    private var selectedTipOption = tipOptions[3]
+    var defaultTipIndex = 3
+    private var selectedTipOption = tipOptions[defaultTipIndex]
 
     var checkAmount = 0.00
     var totalAmount = 0.00
@@ -13,7 +14,7 @@ class MainModel {
 
         // default tip to lowest option
         selectedTipOption = if (position < 0 || position >= tipOptions.size) {
-            tipOptions[0]
+            tipOptions[defaultTipIndex]
         } else {
             tipOptions[position]
         }
