@@ -27,6 +27,9 @@ class MainModel {
         val doublePrice = price!!.toDouble()
         if (doublePrice < 0) {
             checkAmount = 0.00
+            tipAmount = 0.00
+            totalAmount = 0.00
+            return totalAmount
         }
         checkAmount = doublePrice
 
