@@ -1,5 +1,6 @@
 package com.example.kylejablonski.mvpdemo
 
+import junit.framework.Assert.assertEquals
 import org.assertj.core.api.Assertions.assertThat
 import org.junit.Test
 
@@ -24,6 +25,9 @@ class MainModelUnitTest {
         val price = model.computeTotalPrice("100")
 
         assertThat(price).isEqualTo(105.0)
+
+        // JUnit assertion if you prefer
+        // assertEquals(105.0, price)
     }
 
     @Test

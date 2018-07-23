@@ -14,6 +14,7 @@ import java.util.*
 class MainActivity : AppCompatActivity(), Contract.View, ChipGroup.OnCheckedChangeListener {
 
     private lateinit var presenter: Contract.Presenter
+    private var lastCheckedChild = 0
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -33,6 +34,7 @@ class MainActivity : AppCompatActivity(), Contract.View, ChipGroup.OnCheckedChan
     override fun displayTipOptions(percentages: Array<Int>) {
         for (index in percentages.indices) {
             val chip = Chip(chipGroup.context)
+            chip.id = index +1
             chip.chipText = "${percentages[index]}%"
             chip.isClickable = true
             chip.isCheckable = true
@@ -59,6 +61,10 @@ class MainActivity : AppCompatActivity(), Contract.View, ChipGroup.OnCheckedChan
 
     override fun onCheckedChanged(p0: ChipGroup, p1: Int) {
         // subtract 1 since views start at index 1
-        presenter.changeTipPercentage(p0.checkedChipId - 1)
+        val actualViewIndex = p0.checkedChipId - 1
+        chipGroup.getChildAt(actualViewIndex)?.isSelected = true
+        chipGroup.getChildAt(lastCheckedChild)?.isSelected = false
+        lastCheckedChild = actualViewIndex
+        presenter.changeTipPercentage(actualViewIndex)
     }
 }
