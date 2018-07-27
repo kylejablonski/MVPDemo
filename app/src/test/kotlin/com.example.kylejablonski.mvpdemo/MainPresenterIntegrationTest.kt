@@ -23,7 +23,6 @@ class MainPresenterIntegrationTest {
     private lateinit var model: MainModel
 
     // SUT
-    @InjectMockKs
     private lateinit var presenter: MainPresenter
 
     @Before
