@@ -13,7 +13,6 @@ import org.junit.jupiter.api.extension.ExtendWith
  * This class tests the integration between the view and Model
  * within the MainPresenter class.
  */
-@ExtendWith(MockKExtension::class)
 class MainPresenterIntegrationTest {
 
     @RelaxedMockK
