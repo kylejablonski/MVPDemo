@@ -2,9 +2,23 @@
     <string name="app_name">Tip Calculator</string>
     <string name="enter_check_amount">Enter check amount</string>
 
-    <string name="format_tip_amount">tip amount %s</string>
+    <string name="format_tip_amount">Tip: %s</string>
     <string name="select_a_tip">Choose a tip</string>
     <string name="selecting_default_tip">Selecting default tip option</string>
     <string name="error_price_cannot_be_empty">Price cannot be empty</string>
     <string name="custom">Custom</string>
+    <string name="format_total_amount">Total: %s</string>
+
+    <string name="one">1</string>
+    <string name="two">2</string>
+    <string name="three">3</string>
+    <string name="four">4</string>
+    <string name="five">5</string>
+    <string name="six">6</string>
+    <string name="seven">7</string>
+    <string name="eight">8</string>
+    <string name="nine">9</string>
+    <string name="zero">0</string>
+    <string name="dot">.</string>
+    <string name="number_input">Number input</string>
 </resources>

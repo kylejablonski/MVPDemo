@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Keyboard xmlns:android="http://schemas.android.com/apk/res/android"
+  android:horizontalGap="1px"
+  android:keyHeight="72dp"
+  android:keyWidth="33.3%p"
+  android:verticalGap="1px">
+
+  <Row android:rowEdgeFlags="top">
+    <Key
+      android:codes="7"
+      android:keyEdgeFlags="left"
+      android:keyLabel="@string/seven" />
+    <Key
+      android:codes="8"
+      android:keyLabel="@string/eight" />
+    <Key
+      android:codes="9"
+      android:keyEdgeFlags="right"
+      android:keyLabel="@string/nine" />
+  </Row>
+
+  <Row>
+    <Key
+      android:codes="4"
+      android:keyEdgeFlags="left"
+      android:keyLabel="@string/four" />
+    <Key
+      android:codes="5"
+      android:keyLabel="@string/five" />
+    <Key
+      android:codes="6"
+      android:keyEdgeFlags="right"
+      android:keyLabel="@string/six" />
+  </Row>
+
+  <Row>
+    <Key
+      android:codes="1"
+      android:keyEdgeFlags="left"
+      android:keyLabel="@string/one" />
+    <Key
+      android:codes="2"
+      android:keyLabel="@string/two" />
+    <Key
+      android:codes="3"
+      android:keyEdgeFlags="right"
+      android:keyLabel="@string/three" />
+  </Row>
+
+  <Row android:rowEdgeFlags="bottom">
+    <Key
+      android:codes="0"
+      android:keyEdgeFlags="left"
+      android:keyLabel="@string/zero" />
+    <Key
+      android:codes="46"
+      android:keyLabel="@string/dot" />
+    <Key
+      android:codes="-5"
+      android:isRepeatable="true"
+      android:keyIcon="@drawable/ic_delete"
+      android:keyWidth="16.7%p" />
+    <Key
+      android:codes="-4"
+      android:keyEdgeFlags="right"
+      android:keyIcon="@drawable/ic_done"
+      android:keyWidth="16.7%p" />
+  </Row>
+
+</Keyboard>
