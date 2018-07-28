@@ -9,6 +9,4 @@ import kotlin.reflect.KClass
         MainModelUnitTest::class,
         MainPresenterIntegrationTest::class
 )
-class MainTestSuite{
-
-}
+class MainTestSuite

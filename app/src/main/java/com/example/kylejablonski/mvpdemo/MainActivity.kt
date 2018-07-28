@@ -2,6 +2,7 @@ package com.example.kylejablonski.mvpdemo
 
 import android.animation.Animator
 import android.animation.AnimatorListenerAdapter
+import android.app.KeyguardManager
 import android.content.Context
 import android.support.v7.app.AppCompatActivity
 import android.os.Bundle
@@ -23,6 +24,7 @@ import com.example.kylejablonski.mvpdemo.R.id.appCompatTextViewTip
 import com.example.kylejablonski.mvpdemo.R.id.appCompatTextViewTotal
 import kotlinx.android.synthetic.main.activity_main.view.*
 import android.content.Context.INPUT_METHOD_SERVICE
+import android.os.Build
 import android.support.v4.content.ContextCompat.getSystemService
 import android.view.animation.BounceInterpolator
 import android.view.animation.LinearInterpolator
@@ -33,6 +35,8 @@ import android.view.inputmethod.InputMethodManager
  */
 class MainActivity : AppCompatActivity(), Contract.View,
         ChipGroup.OnCheckedChangeListener, View.OnClickListener, SimpleKeyboardAdapterListener {
+
+    val TAG = "MainActivity"
 
     private lateinit var presenter: Contract.Presenter
     private lateinit var keyboard: Keyboard
@@ -207,5 +211,11 @@ class MainActivity : AppCompatActivity(), Contract.View,
         // Do not show the preview balloons
         keyboardLayout.isPreviewEnabled = false
         keyboardLayout.setOnKeyboardActionListener(this)
+
+        if(Build.VERSION.SDK_INT >= Build.VERSION_CODES.LOLLIPOP){
+            editTextCheckAmount.showSoftInputOnFocus = false
+        }else{
+            editTextCheckAmount.isFocusableInTouchMode = false
+        }
     }
 }
